@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import OutputContainer from "../components/OutputContainer";
-import {PatchCall, PostCall} from "../api/ApiCalls";
+import {PatchCall} from "../api/ApiCalls";
 
 function UpdateStudent() {
     const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});
@@ -54,7 +54,7 @@ function UpdateStudent() {
             return;
         }
         try {
-            const response = await PatchCall(output.nic, output);
+            await PatchCall(output.nic, output);
             setResponseMessage("Student successfully updated in the database");
         }
         catch (err) {

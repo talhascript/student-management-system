@@ -54,7 +54,7 @@ function SubmitStudent() {
             return;
         }
         try {
-            const response = await PostCall(output);
+            await PostCall(output);
             setResponseMessage("Student successfully submitted to the database");
         }
         catch (err) {
