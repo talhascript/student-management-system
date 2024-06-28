@@ -12,6 +12,7 @@ function Home() {
                 <Link className={"back-link"} to='/dashboard/get'>Get Student Details</Link>
                 <Link className={"back-link"} to='/dashboard/update'>Update Student Details</Link>
                 <Link className={"back-link"} to='/dashboard/delete'>Delete Student</Link>
+                <Link className={"back-link"} to='/'>Log Out</Link>
             </div>
         </div>
     );

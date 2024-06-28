@@ -1,6 +1,7 @@
-import axios from "axios";
+// src/ApiCalls.js
+import axios from 'axios';
 
-const url = "http://localhost:8080/app/api/students";
+const url = "http://localhost:8080/app/api/students";  
 
 export function PostCall(output) {
     return axios.post(url, output);
