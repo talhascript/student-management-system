@@ -4,7 +4,7 @@ function Home() {
     return (
         <div className={"centered-element"}>
             <div className={"student-container"}>
-                <h1>Student Management System Dashboard</h1>
+                <h1>THE Student Management System Dashboard</h1>
                 <br/><br/>
                 <img src={"./images/dashboard-logo.png"} width={"400px"} alt={"dashboard-logo"}/>
                 <br/><br/>
