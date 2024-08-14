@@ -102,7 +102,7 @@
 //     );
 // }
 
-// export default SubmitStudent;  // ORIGINAL CODE of System
+// export default SubmitStudent;  // ORIGINAL CODE 
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
