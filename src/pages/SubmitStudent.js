@@ -102,7 +102,7 @@
 //     );
 // }
 
-// export default SubmitStudent;  // ORIGINAL CODE
+// export default SubmitStudent;  // ORIGINAL CODE of System
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -272,8 +272,8 @@ function SubmitStudent() {
         type = { "button" } > Check Out < /button> <
         button type = { "submit" } > Submit Student < /button> <
         Link className = { "back-link" }
-        to = '/dashboard' > Back < /Link> <
-        /form> <
+        to = '/dashboard' > Back < /Link> < /
+        form > <
         br / >
         <
         OutputContainer nic = { output.nic }
@@ -283,8 +283,8 @@ function SubmitStudent() {
         /> <
         br / >
         <
-        h4 > { responseMessage } < /h4> <
-        /div> <
+        h4 > { responseMessage } < /h4> < /
+        div > <
         /div>
     );
 }
