@@ -3,6 +3,8 @@
 // import OutputContainer from "../components/OutputContainer";
 // import {PostCall} from "../api/ApiCalls";
 
+//submit student
+
 // function SubmitStudent() {
 //     const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});
 //     const [student, setStudent] = useState({nic: "", name: "", address: "", contact: ""});
@@ -147,7 +149,7 @@ function useStudentForm(initialState) {
         const { name, value } = event.target;
         setResponseMessage("");
         setErrMessage("");
-        setStudent((prevValue) => ({ ...prevValue, [name]: value }));
+        setStudent((prevValue) => ({...prevValue, [name]: value }));
     }
 
     function validateStudent() {
@@ -203,7 +205,7 @@ function SubmitStudent() {
 
     function handleCheckOut() {
         if (validateStudent()) {
-            setOutput({ ...student });
+            setOutput({...student });
             resetStudent();
         }
     }
@@ -224,34 +226,66 @@ function SubmitStudent() {
         }
     }
 
-    return (
-        <div className={"centered-element"}>
-            <img className="student-img" src={"https://cdn-icons-png.flaticon.com/512/5349/5349022.png"} width={"120px"} alt={"user-logo"} />
-            <div className="student-container">
-                <h1>Submit Student</h1>
-                <br />
-                <form onSubmit={handleSubmit}>
-                    <input onChange={handleChange} value={student.nic} id="nic" name="nic" placeholder="Enter NIC Number" />
-                    <input onChange={handleChange} value={student.name} id="name" name="name" placeholder="Enter Name" />
-                    <input onChange={handleChange} value={student.address} id="address" name="address" placeholder="Enter Address" />
-                    <input onChange={handleChange} value={student.contact} id="contact" name="contact" placeholder="Enter Contact" />
-                    <h5>{errMessage}&nbsp;</h5>
-                    <br />
-                    <button onClick={handleCheckOut} type={"button"}>Check Out</button>
-                    <button type={"submit"}>Submit Student</button>
-                    <Link className={"back-link"} to='/dashboard'>Back</Link>
-                </form>
-                <br />
-                <OutputContainer
-                    nic={output.nic}
-                    name={output.name}
-                    address={output.address}
-                    contact={output.contact}
-                />
-                <br />
-                <h4>{responseMessage}</h4>
-            </div>
-        </div>
+    return ( <
+        div className = { "centered-element" } >
+        <
+        img className = "student-img"
+        src = { "https://cdn-icons-png.flaticon.com/512/5349/5349022.png" }
+        width = { "120px" }
+        alt = { "user-logo" }
+        /> <
+        div className = "student-container" >
+        <
+        h1 > Submit Student < /h1> <
+        br / >
+        <
+        form onSubmit = { handleSubmit } >
+        <
+        input onChange = { handleChange }
+        value = { student.nic }
+        id = "nic"
+        name = "nic"
+        placeholder = "Enter NIC Number" / >
+        <
+        input onChange = { handleChange }
+        value = { student.name }
+        id = "name"
+        name = "name"
+        placeholder = "Enter Name" / >
+        <
+        input onChange = { handleChange }
+        value = { student.address }
+        id = "address"
+        name = "address"
+        placeholder = "Enter Address" / >
+        <
+        input onChange = { handleChange }
+        value = { student.contact }
+        id = "contact"
+        name = "contact"
+        placeholder = "Enter Contact" / >
+        <
+        h5 > { errMessage } & nbsp; < /h5> <
+        br / >
+        <
+        button onClick = { handleCheckOut }
+        type = { "button" } > Check Out < /button> <
+        button type = { "submit" } > Submit Student < /button> <
+        Link className = { "back-link" }
+        to = '/dashboard' > Back < /Link> <
+        /form> <
+        br / >
+        <
+        OutputContainer nic = { output.nic }
+        name = { output.name }
+        address = { output.address }
+        contact = { output.contact }
+        /> <
+        br / >
+        <
+        h4 > { responseMessage } < /h4> <
+        /div> <
+        /div>
     );
 }
 

@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import OutputContainer from "../components/OutputContainer";
 import {PatchCall} from "../api/ApiCalls";
 
+//update student
+
 function UpdateStudent() {
     const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});
     const [student, setStudent] = useState({nic: "", name: "", address: "", contact: ""});
